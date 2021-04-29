@@ -16,3 +16,17 @@ public class Solution {
             pair_left[i] = s.next();
             pair_right[i] = s.next();
         }
+  
+        HashSet<String> hashy = new HashSet<String>();
+        int r = 0;
+        for(int i = 0; i < t; i++){
+            String a = pair_left[i] +" "+ pair_right[i];
+            if(!hashy.contains(a)){
+                r++;
+            }
+            hashy.add(a);
+            System.out.println(r);
+        }
+
+    }
+}
